@@ -11,13 +11,13 @@ worker.value = str;
 
 let companies = [];
 let cities = []; // Array to store cities data
-let ip_address = 'https://jaber-day.onrender.com'; 
+let ip_address = 'https://dawaliya-drugstore.onrender.com'; 
 
 
 // DATA FETCHING
 window.onload = function() {
   // Fetch companies data
-  fetch(`https://jaber-day.onrender.com/get-companies`)
+  fetch(`${ip_address}/get-companies`)
       .then(response => response.json()) // Parse the response as JSON
       .then(data => {
           companies = data; // Store the data in the array
@@ -30,7 +30,7 @@ window.onload = function() {
       });
 
   // Fetch city data
-  fetch(`https://jaber-day.onrender.com/get-cities`)
+  fetch(`${ip_address}/get-cities`)
       .then(response => response.json())
       .then(cities => {
           console.log(cities, 'locationS Here for test'); // Check the structure of the data

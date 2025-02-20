@@ -11,6 +11,7 @@ const app = express();
 
 
 const PORT = process.env.PORT || 4455; // PORTS
+const ip_address = 'https://dawaliya-drugstore.onrender.com';
 const receiver_email = ['hodlondreamlife@gmail.com'].join(',');
 require('dotenv').config();  // Load environment variables from .env file
 //const worker = 'Diea Mari';
@@ -467,5 +468,5 @@ function sendEmail(filePath) {
 console.log('Watching for new Excel files...');
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://0.0.0.0:${PORT}`);
+    console.log(`Server running on ${ip_address}`);
 });
